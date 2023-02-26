@@ -1,0 +1,129 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://arc.io/widget.min.js#BiUuegbD"></script>
+    <title>Doqe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/783c6c3caf.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" alt="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>NodeJS/LuaU Programmer</p>
+                <h1>Hello! I'm <span>doqe</span>,<br> I'm from the US.</h1>
+            </div>
+        </div>
+    </div>
+    <!-- about -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/abt.png" alt="Me dancing">
+                </div>
+                <div class="about-col-2">
+                    <div class="sub-title">About Me</div>
+                    <p>I still have a few more languages I program in, but I don't use them as much as NodeJS and
+                        Lua/LuaU, Sadly I don't do any commisions right now, but I might soon!</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="displayamt(`skills`)">Skills</p>
+                        <p class="tab-links" onclick="displayamt(`projects`)">Projects</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>NodeJS</span><br>Express Servers, Discord Bots</li>
+                            <li><span>ROBLOX/LuaU</span><br>ROBLOX Games, ROBLOX Models</li>
+                            <li><span>HTML/JS/CSS</span><br>Front-end pages</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="projects">
+                        <p>(click on any of the titles to go to the games)</p>
+                        <ul>
+                            <li><span><a href="https://www.roblox.com/games/11040274211/landmine-game"
+                                        target="_blank">Landmine Game</a></span><br>A game where you step on
+                                landmines, get badges, and
+                                push people into landmines.</li>
+                            <!-- <li><span>ROBLOX/LuaU</span><br>ROBLOX Games, ROBLOX Models</li>
+                            <li><span>HTML/JS/CSS</span><br>Front-end pages</li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- services -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-discord"></i>
+                    <h2>Discord Bots</h2>
+                    <p>I haven't really experienced that much in this category but I usually use Discord.js, I learned
+                        how to use chat commands way back, and then started using / commands.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-regular fa-window-maximize"></i>
+                    <h2>Applications</h2>
+                    <p>I usually use Electron (nodejs) for apps, I remember making a typing.com robot which can read the
+                        screen automatically and type it out at a super fast speed!</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- portfolio -->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="/images/work1.png" alt="A discord bot giving a text to speech and an 8ball result">
+                    <div class="layer">
+                        <h3>Discord TTS/8Ball</h3>
+                        <p>It will generate a text-to-speech from two different resources and can give an 8ball, it can
+                            also download YouTube thumbnails using youtube-dl.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    var tablinks = document.querySelectorAll('.tab-links')
+    var tabcontents = document.querySelectorAll('.tab-contents')
+
+    function displayamt(tn) {
+        for (tablink of tablinks) {
+            tablink.classList.remove('active-link')
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove('active-tab')
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tn).classList.add('active-tab')
+    }
+</script>
+
+</html>
